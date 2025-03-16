@@ -7,7 +7,7 @@ import pandas as pd
 st.set_page_config(layout="wide", page_title="Teste Streamlit")
 
 # Carrega os dados do arquivo para o dataframe
-df = pd.read_csv("~/Documentos/projetosvscode/azimovstream/spotify.csv")
+df = pd.read_csv("~/Documentos/projetosvscode/projstreamtest/spotify.csv")
 
 # Troca o indice para que seja o valor da coluna Track
 df.set_index("Track", inplace=True)
