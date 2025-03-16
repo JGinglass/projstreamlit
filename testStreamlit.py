@@ -1,11 +1,13 @@
 import streamlit as st
 import pandas as pd
 
+# Inspirado no curso da Azimov
+
 # Altera o layout padrão da página
-st.set_page_config(layout="wide", page_title="Teste Curso Azimov")
+st.set_page_config(layout="wide", page_title="Teste Streamlit")
 
 # Carrega os dados do arquivo para o dataframe
-df = pd.read_csv("/home/jpginglass/Documentos/projetosvscode/azimovstream/spotify.csv")
+df = pd.read_csv("~/Documentos/projetosvscode/azimovstream/spotify.csv")
 
 # Troca o indice para que seja o valor da coluna Track
 df.set_index("Track", inplace=True)
