@@ -16,4 +16,4 @@ df["valor"] = pd.to_numeric(df["valor"], errors='coerce')
 
 df_filtrado = df.loc["01/01/2019":"01/01/2025"]
 st.line_chart(df_filtrado["valor"])
-df_filtrado
+df_filtrado 
