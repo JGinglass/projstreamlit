@@ -14,6 +14,20 @@ df["valor"] = df["valor"].str.replace(",", ".")
 # Define o tipo da coluna "valor" como numérico
 df["valor"] = pd.to_numeric(df["valor"], errors='coerce')
 
-df_filtrado = df.loc["01/01/2019":"01/01/2025"]
-st.line_chart(df_filtrado["valor"])
-df_filtrado 
+option = st.selectbox(
+    "Selecione o ano:",
+    (2020, 2021, 2022, 2023, 2024)  
+)
+
+df_filtrado = df.loc["01/01/"+str(option):"31/12/"+str(option+1)]
+st.bar_chart(df_filtrado["valor"])
+df_filtrado
+
+# Filtra os dados para o ano de 2024
+df_2024 = df_filtrado.loc["2024"]
+
+# Exibe o dataframe filtrado para o ano de 2024
+st.write("Valores do ano de 2024")
+st.dataframe(df_2024["valor"])
+
+ 
